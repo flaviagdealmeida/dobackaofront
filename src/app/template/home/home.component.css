@@ -1,8 +1,6 @@
 .container-fluid{
-    width: auto;
-    height:700px;
     background-image: url("../../../assets/img/fundo.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right center;
+    height: 300px;
+    
 }

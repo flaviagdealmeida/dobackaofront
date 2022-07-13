@@ -12,12 +12,14 @@ import { FormatarMoedaPipe } from './formatar-moeda.pipe';
 import { AppRoutingModule } from './app-routing.module';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     CepComponent,
     ClienteComponent,
     FormatarMoedaPipe,
+
 
   ],
   imports: [

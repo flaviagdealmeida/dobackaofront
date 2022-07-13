@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -10,6 +11,7 @@ import { HomeComponent } from './home/home.component';
   declarations: [
     NavbarComponent,
     HomeComponent,
+    FooterComponent,
   
   ],
   imports: [
@@ -18,6 +20,7 @@ import { HomeComponent } from './home/home.component';
   exports:[
     NavbarComponent,
     HomeComponent,
+    FooterComponent,
  
   ]
 })
