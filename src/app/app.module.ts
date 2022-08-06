@@ -11,15 +11,12 @@ import { ClienteComponent } from './cliente/cliente.component';
 import { FormatarMoedaPipe } from './formatar-moeda.pipe';
 import { AppRoutingModule } from './app-routing.module';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
     CepComponent,
     ClienteComponent,
     FormatarMoedaPipe,
-
 
   ],
   imports: [

@@ -15,6 +15,7 @@ export class CepComponent implements OnInit {
     .subscribe((dados) => this.populaForm(dados, form)); 
     
   }
+
   populaForm(dados, form) {
    form.setValue({
     cep:dados.cep,
@@ -22,9 +23,6 @@ export class CepComponent implements OnInit {
     bairro:dados.bairro,
     localidade:dados.localidade,
     uf:dados.uf,
-    
-   
-
    })
   }
 

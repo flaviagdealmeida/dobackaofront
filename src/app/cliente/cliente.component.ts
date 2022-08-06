@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ClienteService } from '../service/cliente.service';
 import { Cliente } from './cliente';
 
 @Component({
@@ -11,19 +12,24 @@ export class ClienteComponent implements OnInit {
 
   cliente:Cliente = {
     nome:"",
-    idade:0, 
-    salario:0,
-    cadastro: new Date()
+    sobrenome:"",
+    nomeSocial:"",
+    email:"",
+    ativo:true,
   }
 
-
-  addCliente(){
-    let novoCliente =  Object.assign({}, this.cliente)
-    this.clientes.push(novoCliente);
+  constructor(private service: ClienteService) { 
+    this.cliente = new Cliente();
   }
-  constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
+    this.service
+      .inserirClente(this.cliente)
+      .subscribe( response => console.log(response));
+
   }
 
 }

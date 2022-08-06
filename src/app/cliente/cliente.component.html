@@ -1,48 +1,25 @@
 
 
 <div class="container">
-    <div class="form-group">
-        <label class="col-sm-2 col-form-label">Cliente:</label>
-        <input class="form-control" type="text" [(ngModel)] = "cliente.nome" />
+    <form #clienteForm="ngForm" (ngSubmit)="onSubmit()" class="form-group">
+        <label class="col-sm-2 col-form-label">Nome:</label>
+        <input class="form-control" type="text" [(ngModel)] = "cliente.nome" name="nome" />
 
-        <label class="col-sm-2 col-form-label">Idade:</label>
-        <input class="form-control" type="text"  [(ngModel)] = "cliente.idade"/>      
+        <label class="col-sm-2 col-form-label">Sobrenome:</label>
+        <input class="form-control" type="text"  [(ngModel)] = "cliente.sobrenome" name="sobrenome"/>      
 
-        <label class="col-sm-2 col-form-label">Salario:</label>
-        <input class="form-control" type="text"  [(ngModel)] = "cliente.salario"/>
+        <label class="col-sm-2 col-form-label">Nome Social:</label>
+        <input class="form-control" type="text"  [(ngModel)] = "cliente.nomeSocial" name="nomeSocial"/>
       
+        <label class="col-sm-2 col-form-label">Email:</label>
+        <input class="form-control" type="text"  [(ngModel)] = "cliente.email" name="email"/>
+        <br />
+
+        <label class="col-sm-2 col-form-label">Ativo:</label>
+        <input class="form-control" type="text"  [(ngModel)] = "cliente.ativo" name="ativo"/>
         <br />
        
-    </div>
+        <button type="submit" class="btn btn-success"> Novo </button>
+    </form>
 
-<app-cep></app-cep>
- <button type="button" class="btn btn-success" (click) = "addCliente()" > Novo </button>
-
-<hr />
-
-
-<div class="tabela">
-    <table class="table table-hover">
-        <tr>
-            <th scope="col">Nome</th>
-            <th scope="col">Idade</th>
-            <th scope="col">Salario</th>
-            <th scope="col">Cadastro</th>
-        </tr>
-        <tbody>
-            <tr 
-            class="table-default"
-            [id] = " ' lista-' + item.nome "
-            
-            [ngClass] = "{'maior':item.idade >= 18, 'menor': item.idade < 18, 'melhor': item.idade >=65}"       
-            *ngFor="let item of clientes">
-           <td>{{item.nome | uppercase}}</td>  
-           <td>{{item.idade}}</td>
-           <td>{{item.salario | formatarMoeda}}</td>
-           <td>{{item.cadastro | date: 'dd/MM/yyyy' }}</td>
-      
-        </tbody>
-    </table>
-
-</div>
 </div>
